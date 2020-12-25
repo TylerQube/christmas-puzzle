@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Puzzle 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+    <link rel="stylesheet" href="../styles/puzzle.css"/>
+    <!-- https://www.freepik.com/vectors/background - Background vector created by vectorpocket - www.freepik.com -->
+    <link rel="icon" href="../imgs/santa_hat.png" type="image/x-icon">
+</head>
+<body>
+    <!-- ID used for puzzle number -->
+    <div id="puzzle-num" style="display:none;">2</div>
+    <div id="q-container">
+        <h1>CHALLENGE #2</h1>
+        <h2>This next code resides in an alcove in which we used to hide</h2>
+        <input type="text" id="ans-input"/>
+        <div id="submit-btn" class="no-select">Submit</div>
+    </div>
+    <div id="transition-full"><p id="msg"></p></div>
+    <audio id="correct-sound" src="../sounds/correct.wav"></audio>
+    <audio id="incorrect-sound" src="../sounds/incorrect.mp3"></audio>
+</body>
+<script src="../puzzle.js"></script>
+</html>

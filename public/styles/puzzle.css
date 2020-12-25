@@ -4,10 +4,14 @@ body {
     align-items: center;
     justify-content: center;
     text-align:center;
-    min-height:100%;
-    background-image:url('./blackeyedpeas.jpeg');
-    background-size: cover;
-    background-repeat:no-repeat;
+    color:black;
+    margin:0;
+    padding:0;
+    font-family: "Verdana", sans-serif;
+}
+
+html {
+    /* overflow:hidden; */
 }
 
 #transition-full {
@@ -18,6 +22,7 @@ body {
     background-color:lime;
     transition:0.5s height ease-in-out;
     position:fixed;
+    overflow:hidden;
 }
 
 div {
@@ -25,20 +30,32 @@ div {
     align-items:center;
     justify-content:center;
     flex-direction: column;
+}
 
+p {
+    font-size: 8rem;
+    color:white;
 }
 
 #q-container {
     position:absolute;
+    z-index: -1;
     top:0;
     height:100%;
+    width:100%;
+    padding:10px 10px;
+    margin:0;
+    background-image:url('../imgs/christmas_bg.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
 }
 
-input[type=number] {
-    width:5em;
+input[type=text] {
     height:2em;
     font-size:300%;
+    width: 8em;
     border:1px solid black;
+    text-align:center;
 }
 
 #submit-btn {
@@ -47,26 +64,47 @@ input[type=number] {
     justify-content: center;
     align-items:center;
     border-radius: 500px;
-    border: 1px solid black;
+    border: none;
     
     font-size:300%;
-    color:black;
-    background-color:white;
+    color:white;
+    background-color:rgb(34, 79, 184);
 
-    box-shadow: 0.2em 0.2em 0 black;
+    box-shadow: 0.1em 0.2em 0 rgb(9, 54, 105);
     transition:0.1s;
 }
 
 #submit-btn:active {
-    box-shadow: 0 0 0 black;
-    transform:translate(0.2em, 0.2em);
+    box-shadow: 0.025em 0.05em 0 rgb(9, 54, 105);
+    transform:translate(0.075em, 0.195em);
+}
+
+.wrong-code {
+    animation: wrong-shake 0.3s;
+}
+
+.correct-code {
+    animation: correct-shake 0.3s;
+}
+
+@keyframes wrong-shake {
+    25% { transform: rotate(15deg) }
+    50% { transform: rotate(-15deg) }
+    75% { transform: rotate(-15deg) }
+    100% { transform: rotate(15deg) }
+}
+
+@keyframes correct-shake {
+    50% { transform: translateX(20px) }
+    100% { transform: translateX(0px) }
 }
 
 h1, h2, h3 {
-    background-color:white;
-    border-radius: 50px;
-    padding: 10px;
-    border: 1px solid black;
+    background-color:rgb(105, 138, 228);
+    color:white;
+    border: 2px solid rgb(25, 98, 158);
+    display:inline-block;
+    padding: 10px 10px;
 }
 
 .no-select {

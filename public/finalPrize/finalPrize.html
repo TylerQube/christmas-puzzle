@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Congrats!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+    <!-- <link rel="stylesheet" href="../styles/puzzle.css"/> -->
+    <!-- https://www.freepik.com/vectors/background - Background vector created by vectorpocket - www.freepik.com -->
+    <link rel="icon" href="../imgs/santa_hat.png" type="image/x-icon">
+    <link rel="stylesheet" href="../finalPrize/finalPrize.css">
+    <link rel="stylesheet" href="../finalPrize/css/chessboard-1.0.0.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../finalPrize/chessboard-1.0.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script><script>confetti.start()</script>
+</head>
+<body>
+    <div id="q-container"></div>
+    <h1>Congratulations, you did it!</h1>
+    <h2>To claim your gift, please fill out the following security verifications:</h2>
+
+    <div id="verify-container">
+        <div id="_1" class="verify cont">
+            <!-- https://codepen.io/souporserious/pen/XJQLEb -->
+            <h4>Slide to Confirm</h4>
+            <input type="range" value="0" class="pullee" />
+            <!-- https://codepen.io/haniotis/pen/KwvYLO -->
+            <svg class="" id="check1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="" id="circle1" cx="26" cy="26" r="25" fill="none"/>
+                <path class="" id="path1" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+        <div id="_2" class="verify cont">
+            <h4>Please confirm your confirmation by selecting each checkbox</h4>
+            <div class="flex-col">
+                <div class="flex-row">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                </div>
+                <div class="flex-row">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                </div>
+                <!-- <div class="flex-row">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                </div>
+                <div class="flex-row">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                    <input type="checkbox" name="verify-checks">
+                </div> -->
+            </div>
+            <svg class="" id="check2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="" id="circle2" cx="26" cy="26" r="25" fill="none"/>
+                <path class="" id="path2" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+        <div id="_3" class="verify cont">
+            <h4>To validate the confirming of your confirmation, please answer the following question:</h4>
+            <h4>What is the Capital of Indonesia?</h4>
+            <input type="text" id="capital-input"/>
+            <svg class="" id="check3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="" id="circle3" cx="26" cy="26" r="25" fill="none"/>
+                <path class="" id="path3" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+        <div id="_4" class="verify cont">
+            <h4>In order to successfully authenticate the validation of your confirmation confirming, please solve this chess puzzle:</h4>
+            <h4>White to move, find checkmate in one move</h4>
+            <div>
+                <div id="chessboard"></div>
+            </div>
+            <div class="check-container">
+                <svg class="" id="check4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="" id="circle4" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="" id="path4" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+        </div>
+        <div id="_5" class="verify cont">
+            <h4>YOU DID IT!!!</h4>
+            <h5>Go look in the black chest in Mom & Dad's closet to find a bit of an upgrade...</h5>
+            <!-- <img src="../imgs/christmas_tree.jpg" id="christmas-tree"/> -->
+            <!-- Christmas vector created by freepik - www.freepik.com -->
+            <img class="christmas-img" src="https://media1.tenor.com/images/614df8905da98b3db7be051215e7dd30/tenor.gif">
+        </div>
+    </div>
+
+    <div id="transition-full"><p id="msg"></p></div>
+    <audio id="correct-sound" src="../sounds/correct.wav"></audio>
+</body>
+<script src="../slider.js"></script>
+<script src="./finalPrize/finalPrize.js"></script>
+</html>

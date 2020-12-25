@@ -1,0 +1,331 @@
+#verify-container {
+    background-color:white;
+    border: 2px solid rgb(25, 98, 158);
+    color:black;
+}
+
+svg {
+  margin: 10px;
+}
+
+.verify {
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 1.5s ease-in-out;
+}
+
+h4, h5 {
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.christmas-img {
+  margin: 10px;
+}
+
+#chessboard {
+  display:block;
+  margin:auto;
+  width: 400px;
+  height: 400px;
+}
+
+#christmas-tree {
+  width: 30vw;
+}
+
+.flex-col {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-row {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+input[type=checkbox] {
+    width: 4rem;
+    height: 4rem;
+}
+
+.pullee {
+    width: 30rem;
+    appearance: none;
+}
+
+.pullee:active::-webkit-slider-thumb {
+appearance: none;
+transform: scale(1.1);
+cursor: -webkit-grabbing;
+cursor: -moz-grabbing;
+}
+.pullee:active::-moz-range-thumb {
+border: 0;
+transform: scale(1.1);
+cursor: -webkit-grabbing;
+cursor: -moz-grabbing;
+}
+.pullee:active::-ms-thumb {
+transform: scale(1.1);
+cursor: -webkit-grabbing;
+cursor: -moz-grabbing;
+}
+.pullee:focus {
+outline: none;
+}
+.pullee::-webkit-slider-thumb {
+appearance: none;
+display: block;
+width: 4rem;
+height: 4rem;
+border-radius: 50%;
+background: #5990DD;
+transform-origin: 50% 50%;
+transform: scale(1);
+transition: transform ease-out 100ms;
+cursor: -webkit-grab;
+cursor: -moz-grab;
+}
+.pullee::-moz-range-thumb {
+border: 0;
+display: block;
+width: 4rem;
+height: 4rem;
+border-radius: 50%;
+background: #5990DD;
+transform-origin: 50% 50%;
+transform: scale(1);
+transition: transform ease-out 100ms;
+cursor: -webkit-grab;
+cursor: -moz-grab;
+}
+.pullee::-ms-thumb {
+display: block;
+width: 4rem;
+height: 4rem;
+border-radius: 50%;
+background: #5990DD;
+transform-origin: 50% 50%;
+transform: scale(1);
+transition: transform ease-out 100ms;
+cursor: -webkit-grab;
+cursor: -moz-grab;
+}
+.pullee::-webkit-slider-runnable-track {
+height: 4rem;
+padding: 0.25rem;
+box-sizing: content-box;
+border-radius: 500rem;
+background-color: #DDE0E3;
+}
+.pullee::-moz-range-track {
+height: 1rem;
+padding: 0.25rem;
+box-sizing: content-box;
+border-radius: 1rem;
+background-color: #DDE0E3;
+}
+.pullee::-moz-focus-outer {
+border: 0;
+}
+.pullee::-ms-track {
+    border: 0;
+    height: 1rem;
+    padding: 0.25rem;
+    box-sizing: content-box;
+    border-radius: 1rem;
+    background-color: #DDE0E3;
+    color: transparent;
+}
+.pullee::-ms-fill-lower, .pullee::-ms-fill-upper {
+    background-color: transparent;
+}
+.pullee::-ms-tooltip {
+    display:  none;  
+}
+
+.center-xy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+:root {
+    /* Colors */
+    --green: #7ac142;
+    --white: #fff;
+
+    /* Misc */
+    --curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: var(--white);
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px var(--green);
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: var(--green);
+  fill: none;
+  animation: stroke .6s var(--curve) forwards;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke .3s var(--curve) .8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px var(--green);
+  }
+}
+
+body {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+  color:black;
+  margin:0;
+  padding:0;
+  font-family: "Verdana", sans-serif;
+}
+
+#transition-full {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background-color:lime;
+  transition:0.5s height ease-in-out;
+  position:fixed;
+  overflow:hidden;
+}
+
+.cont {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+}
+
+p {
+  font-size: 8rem;
+  color:white;
+}
+
+#q-container {
+  position:absolute;
+  z-index: -1;
+  top:0;
+  height:100%;
+  width:100%;
+  padding:10px 10px;
+  margin:0;
+  background-image:url('../imgs/christmas_bg.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+}
+
+input[type=text] {
+  height:2em;
+  font-size:300%;
+  width: 8em;
+  border:1px solid black;
+  text-align:center;
+}
+
+#submit-btn {
+  padding: 0 1em;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  border-radius: 500px;
+  border: none;
+  
+  font-size:300%;
+  color:white;
+  background-color:rgb(34, 79, 184);
+
+  box-shadow: 0.1em 0.2em 0 rgb(9, 54, 105);
+  transition:0.1s;
+}
+
+#submit-btn:active {
+  box-shadow: 0.025em 0.05em 0 rgb(9, 54, 105);
+  transform:translate(0.075em, 0.195em);
+}
+
+.wrong-code {
+  animation: wrong-shake 0.3s;
+}
+
+.correct-code {
+  animation: correct-shake 0.3s;
+}
+
+@keyframes wrong-shake {
+  25% { transform: rotate(15deg) }
+  50% { transform: rotate(-15deg) }
+  75% { transform: rotate(-15deg) }
+  100% { transform: rotate(15deg) }
+}
+
+@keyframes correct-shake {
+  50% { transform: translateX(20px) }
+  100% { transform: translateX(0px) }
+}
+
+h1, h2, h3 {
+  background-color:rgb(105, 138, 228);
+  color:white;
+  border: 2px solid rgb(25, 98, 158);
+  display:inline-block;
+  padding: 10px 10px;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}

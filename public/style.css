@@ -2,9 +2,9 @@ body {
     display: flex;
     justify-content: center;
     text-align:center;
-    background-image: url('./background.jpg');
+    background-image: url('./imgs/christmas_bg.jpg');
     background-size:cover;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 #menu {
@@ -22,25 +22,25 @@ body {
     margin: 0.5em 0 0.5em 0;
 }
 
-#begin-btn {
+.btn {
     padding: 0 1em;
     display:flex;
     justify-content: center;
     align-items:center;
     border-radius: 500px;
-    border: 1px solid black;
+    border: none;
     
     font-size:300%;
-    color:black;
-    background-color:white;
+    color:white;
+    background-color:rgb(34, 79, 184);
 
-    box-shadow: 0.2em 0.2em 0 black;
+    box-shadow: 0.1em 0.2em 0 rgb(9, 54, 105);
     transition:0.1s;
 }
 
-#begin-btn:active {
-    box-shadow: 0 0 0 black;
-    transform:translate(0.2em, 0.2em);
+.btn:active {
+    box-shadow: 0.025em 0.05em 0 rgb(9, 54, 105);
+    transform:translate(0.075em, 0.195em);
 }
 
 #transition-screen {
@@ -61,6 +61,19 @@ body {
     background-color:lime;
     transition:0.5s height ease-in-out;
     position:fixed;
+}
+
+#q-container {
+    position:absolute;
+    z-index: -1;
+    top:0;
+    height:100%;
+    width:100%;
+    padding:10px 10px;
+    margin:0;
+    background-image:url('../imgs/christmas_bg.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
 }
 
 .fullscreen {
