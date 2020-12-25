@@ -36,8 +36,6 @@ const options = {
 
 console.log("this is Puzzle #" + puzzleNum);
 
-submitBtn.addEventListener('click', submit);
-
 const submit = () => {
     console.log("Submitting...");
     if (input.value) {
@@ -57,6 +55,8 @@ const submit = () => {
         });
     }
 }
+
+submitBtn.addEventListener('click', submit);
 
 const checkAnswer = (correct) => {
     const animDur = 500;
