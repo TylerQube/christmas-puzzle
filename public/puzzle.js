@@ -36,7 +36,9 @@ const options = {
 
 console.log("this is Puzzle #" + puzzleNum);
 
-submitBtn.addEventListener('click', (e) => {
+submitBtn.addEventListener('click', submit);
+
+const submit = () => {
     console.log("Submitting...");
     if (input.value) {
         const json = {
@@ -54,7 +56,7 @@ submitBtn.addEventListener('click', (e) => {
             checkAnswer(resJSON.isCorrect);
         });
     }
-});
+}
 
 const checkAnswer = (correct) => {
     const animDur = 500;

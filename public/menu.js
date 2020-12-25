@@ -17,6 +17,8 @@ fetch(window.location.href + "curPuzzle")
   if(resJSON.curPuzzle > 1) {
     showContinueBtn(parseInt(resJSON.curPuzzle));
   }
+}).catch(err => {
+  console.log(err);
 });
 
 let currentPuzzle = 1;

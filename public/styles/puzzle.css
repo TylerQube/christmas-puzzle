@@ -54,7 +54,7 @@ input[type=text] {
     text-align:center;
 }
 
-#submit-btn {
+#submit-btn, .btn {
     padding: 0 1em;
     display:flex;
     justify-content: center;
@@ -70,9 +70,19 @@ input[type=text] {
     transition:0.1s;
 }
 
-#submit-btn:active {
+#submit-btn *, .btn * {
+    margin-bottom: 0;
+}
+
+#submit-btn:active, .btn:active {
     box-shadow: 0.025em 0.05em 0 rgb(9, 54, 105);
     transform:translate(0.075em, 0.195em);
+}
+
+#menu {
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrong-code {
