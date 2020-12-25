@@ -39,8 +39,6 @@ app.get('/', (req, res) => {
         console.log("resetting current puzzle session var...");
     } 
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
-    res.sendFile(path.join(__dirname, 'public', 'finalPrize' , 'finalPrize.html'));
-
 });
 
 app.use(express.static(path.join(__dirname, '/public')));
