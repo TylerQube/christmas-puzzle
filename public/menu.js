@@ -1,3 +1,5 @@
+document.querySelector("#transition-full").style.height = "0%";
+
 document.querySelector("#begin-btn").addEventListener("click", (event) => {
   document.querySelector("#transition-full").style.height = "100%";
 
