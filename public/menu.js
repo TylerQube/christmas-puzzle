@@ -1,5 +1,5 @@
 document.querySelector("#begin-btn").addEventListener("click", (event) => {
-  document.querySelector("#transition-screen").style.height = "100%";
+  document.querySelector("#transition-full").style.height = "100%";
 
   setTimeout(() => {
     fetch(window.location.href + 'puzzle1', {
@@ -30,7 +30,7 @@ const showContinueBtn = (cur) => {
 };
 
 document.querySelector("#continue-btn").addEventListener("click", (event) => {
-  document.querySelector("#transition-screen").style.height = "100%";
+  document.querySelector("#transition-full").style.height = "100%";
 
   setTimeout(() => {
     fetch(window.location.href + `puzzle${currentPuzzle}`, {
