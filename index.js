@@ -5,7 +5,7 @@ const cors = require('cors');
 const session = require('express-session');
 const { nextTick } = require('process');
 const dotenv = require('dotenv');
-const cfg = dotenv.config().parsed;
+// const cfg = dotenv.config().parsed;
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(session({
-    secret: cfg.SSN_SECRET
+    secret: process.env.SSN_SECRET
 }));
 
 const codes = [
