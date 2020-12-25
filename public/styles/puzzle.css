@@ -10,10 +10,6 @@ body {
     font-family: "Verdana", sans-serif;
 }
 
-html {
-    /* overflow:hidden; */
-}
-
 #transition-full {
     position:absolute;
     bottom:0;
